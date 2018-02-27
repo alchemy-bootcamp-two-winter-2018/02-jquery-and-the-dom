@@ -25,7 +25,7 @@ Article.prototype.toHtml = function() {
     if (!this.publishedOn) $newArticle.addClass('draft');
     $newArticle.attr('data-category', this.category);
 
-    /* TODO: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
+    /* TODOne: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
     We need to fill in:
     1. author name,
     2. author url,
@@ -35,9 +35,6 @@ Article.prototype.toHtml = function() {
 
     $newArticle.find('address a').text(this.author).attr('href', this.authorUrl);
     $newArticle.find('h1').text(this.title);
-
-   
-    // const $body = $(body);
     $newArticle.find('.article-body').html(this.body);
     $newArticle.find('time').attr('datetime', this.publishedOn);
 
