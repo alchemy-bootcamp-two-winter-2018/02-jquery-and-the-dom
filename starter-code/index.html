@@ -5,7 +5,7 @@
   <title>Lab 2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- // TODO: Incorporate yours or your pair's CSS -->
-  <link rel="stylesheet" href="vendor/styles/normalize.css">
+  <!-- <link rel="stylesheet" href="vendor/styles/normalize.css"> -->
   <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/alchemycodelab/code-301-prework/master/acl-logo.PNG?s=100">
 </head>
 <body>
@@ -28,24 +28,30 @@
   </header>
   <main>
     <section id="articles">
-      <article class="template" data-js-category="cat">
-        <header>
-          <h1>Title</h1>
-          <div class="byline">
-            By <address><a href="">Author Name</a></address>
-            published <time pubdate datetime="2000-01-01">Publish Time</time>
-            <!-- COMMENT: What is the <time> HTML element used for? How does this connect to our JS files?  -->
-            <!-- PUT YOUR RESPONSE HERE -->
-          </div>
-        </header>
-        <section class="article-body"></section>
-      </article>
+      <template id="article-template">
+          <article data-js-category="category">
+            <header>
+              <h1>Title</h1>
+              <div class="byline">
+                By <address><a href="">Author Name</a></address>
+                published <time pubdate datetime="2000-01-01">Publish Time</time>
+                <!-- COMMENT: What is the <time> HTML element used for? How does this connect to our JS files?  -->
+                <!-- PUT YOUR RESPONSE HERE -->
+              </div>
+            </header>
+            <section class="article-body"></section>
+          </article>
+      </template>
     </section>
   </main>
   <footer>
     &copy; 2017 Code Fellows | Static Blog | Happy Ipsum!
   </footer>
 <!-- // TODO: Include any/all needed script tags -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="scripts/blogArticles.js"></script>
+<script src="scripts/article.js"></script>
 
 </body>
 </html>
