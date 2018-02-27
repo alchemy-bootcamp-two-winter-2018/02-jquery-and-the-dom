@@ -11,7 +11,7 @@ function Article (rawDataObj) {
     });
 
     // TODOne: Explain this
-    // Setting up a constructor function for the object Article, which will create an instance that shares the properties of the object literal used as an argument.
+    // The code above sets up a constructor function for the object Article, which will create an instance that shares the properties of the object literal used as an argument. The Object.keys() method returns an array of the "enumerable" properties of the object passed in. The function then assigns the value from each of the rawDataObj's properties to a newly instantiated object.
 }
 
 Article.prototype.toHtml = function() {
