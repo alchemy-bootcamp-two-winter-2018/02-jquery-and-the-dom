@@ -1,7 +1,7 @@
 'use strict';
 
 // COMMENT: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
-// PUT YOUR RESPONSE HERE
+// rawData is an array of object literals made up of key/value pairs. These objects are used in the article.js to create articles in the view.
 
 const rawData = [
     {
