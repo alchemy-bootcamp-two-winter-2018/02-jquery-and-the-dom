@@ -16,7 +16,7 @@ address {
     color: grey;
 }
 
-.dropDown {
+.drop-down {
     display: none;
     list-style-type: none;
     color: grey;
@@ -30,7 +30,7 @@ address {
     font-size: 300%
 }
 
-.icon-menu:hover .dropDown {
+.icon-menu:hover .drop-down {
     display: block;
 }
 
@@ -39,7 +39,7 @@ a {
     color: grey;
 }
 
-.dropDown li {
+.drop-down li {
     font-size: 150%;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -51,19 +51,19 @@ a {
 }
 
 @media screen and (min-width: 640px) {
-    .dropDown {
+    .drop-down {
         display: block;
         list-style-type: none;
         color: grey;
         margin: 0;
     }
-    .dropDown li {
+    .drop-down li {
         display: inline;
     }
     .main-nav {
         height: fit-content;
     }
-    .dropDown a {
+    .drop-down a {
         float: left;
         text-align: center;
         padding-left: 20px;
