@@ -10,7 +10,7 @@ function Article (rawDataObj) {
         this[key] = rawDataObj[key];
     });
 
-    // Walk through the code in the constructor function and write a comment explaining what's happening in lines 9-11. 
+    // Walk through the code in the constructor function and write a comment explaining what's happening in lines 9-11.
     // It takes the keys of each object instance inside the rawData array and assigns it to a key of the new object instance for the length of the rawData array.
 }
 
@@ -49,7 +49,7 @@ rawData.sort(function(a,b) {
     return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
-// TODO: Refactor these for loops using the .forEach() array method.
+// TODOne: Refactor these for loops using the .forEach() array method.
 
 // for(let i = 0; i < rawData.length; i++) {
 //     articles.push(new Article(rawData[i]));
@@ -59,6 +59,10 @@ rawData.forEach(function (rawDataObj) {
     articles.push(new Article(rawDataObj));
 });
 
-for(let i = 0; i < articles.length; i++) {
-    $('#articles').append(articles[i].toHtml());
-}
+// for(let i = 0; i < articles.length; i++) {
+//     $('#articles').append(articles[i].toHtml());
+// }
+
+articles.forEach(function (articlesObj) {
+    $('#articles').append(articlesObj.toHtml());
+});
