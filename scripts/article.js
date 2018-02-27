@@ -3,29 +3,33 @@
 const articles = [];
 
 // COMMENT: What is the purpose of the following function? Why is its name capitalized? Explain the context of "this" within the function. What does "rawDataObj" represent?
-// PUT YOUR RESPONSE HERE
+// TODO As a style standard, the variable name of a constructor function is captilized to indicate that it is the template.
 
 function Article (rawDataObj) {
     Object.keys(rawDataObj).forEach(key => {
         this[key] = rawDataObj[key];
     });
 
-    // TODO: Use the object literal that is passed in to complete this constructor function
-    // Save ALL the properties of `rawDataObj` into `this`
+    // TODOne?: Explain this
+    // Setting up a constructor function for the object Article, which will create an instance that shares the properties of the object literal used as an argument.
 }
 
 Article.prototype.toHtml = function() {
     // COMMENT: What is the benefit of cloning the article? (see the jQuery docs)
-    // PUT YOUR RESPONSE HERE
+    // Cloning makes a detailed copy, including descendent elements and nodes, super helpful for duplicating HTML sections like we are using.
 
     const template = $('#article-template').clone().html();
-    /* TODO: We got the html from our template, but we need to turn the html string into a jQuery object and store it in our $newArticle variable. */
-    const $newArticle;
+    /* TODOne: We got the html from our template, but we need to turn the html string into a jQuery object and store it in our $newArticle variable. */
+    const $newArticle = $(template);
 
     if (!this.publishedOn) $newArticle.addClass('draft');
     $newArticle.attr('data-category', this.category);
+    $newArticle.find('address a').text(this.author).attr('href', this.authorUrl);
+    $newArticle.find('h1').text(this.title);
+    $newArticle.find('.article-body').html(this.body);
+    $newArticle.find('time').attr('datetime', this.publishedOn);
 
-    /* TODO: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
+    /* TODOne: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
     We need to fill in:
     1. author name,
     2. author url,
