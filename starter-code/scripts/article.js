@@ -38,7 +38,7 @@ Article.prototype.toHtml = function() {
 
    
     // const $body = $(body);
-    $newArticle.find('.article-body').text($(this.body));
+    $newArticle.find('.article-body').html(this.body);
     $newArticle.find('time').attr('datetime', this.publishedOn);
 
     // REVIEW: Display the date as a relative number of 'days ago'
