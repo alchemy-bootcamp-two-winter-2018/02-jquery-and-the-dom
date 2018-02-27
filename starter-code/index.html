@@ -6,10 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- // TODO: Incorporate yours or your pair's CSS -->
   <link rel="stylesheet" href="vendor/styles/normalize.css">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/icons.css">
-  <link rel="stylesheet" href="styles/layout.css">
-  <link rel="stylesheet" href="styles/modules.css">
   <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/alchemycodelab/code-301-prework/master/acl-logo.PNG?s=100">
 </head>
 <body>
@@ -23,8 +19,8 @@
     <nav class="main-nav">
       <div class="icon-menu"></div>
       <ul>
-        <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
-        <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
+        <li class="tab" data-js-content="articles"><a href="#" class="icon-home"> Home</a></li>
+        <li class="tab" data-js-content="about"><a href="#" class="icon-address-book"> About</a></li>
         <li><a href="http://twitter.com/brookr" target="_blank" class="icon-twitter3"> Twitter</a></li>
         <li><a href="http://github.com/brookr" target="_blank" class="icon-github"> GitHub</a></li>
       </ul>
@@ -32,7 +28,7 @@
   </header>
   <main>
     <section id="articles">
-      <article class="template" data-category="cat">
+      <article class="template" data-js-category="cat">
         <header>
           <h1>Title</h1>
           <div class="byline">

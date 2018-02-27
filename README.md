@@ -7,12 +7,11 @@ Lab 02: jQuery and the DOM
 1. Resources
 1. Configuration
 1. User Stories and Feature Tasks
-1. Documentation
 
 --
 
 ## Submission Instructions
-Follow the submission instructions from Lab 01.
+Follow the submission instructions outlined in our [submit-process repo](https://github.com/alchemy-bootcamp-two-winter-2018/submit-process).
 
 ## Resources  
 [jQuery cheatsheet](https://oscarotero.com/jquery/)
@@ -47,7 +46,7 @@ _Your repository must include:_
 
 ## User Stories and Feature Tasks
 
-- Continue styling the app using SMACSS practices. Take a few minutes for code review of your partner's CSS and decide how to incorporate it into your paired lab. You can choose one partner's CSS structure, or you can combine them as you see fit. Seek to optimize and organize your CSS as much as possible!
+- Continue styling the app using SMACSS practices. Take a few minutes for code review of your partner's CSS from yesterday and decide how to incorporate it into your paired lab. You can choose one partner's CSS structure, or you can combine them as you see fit. Seek to optimize and organize your CSS as much as possible!
 
 *As a user, I want my site to display my blog articles in a clear, logical way so that I can find the most recent articles first and the blog is easy to read.*
 
@@ -67,32 +66,3 @@ _Your repository must include:_
 *As a developer, I want to optimize iteration with JavaScript array methods so that my code is more condensed and maintainable.*
 
 - Refactor all `for` loops using the `.forEach()` method.
-
-
-## Documentation
-_Your README.md must include:_
-
-```md
-# Project Name
-
-**Author**: Your Name Goes Here
-**Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
-
-## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
-
-## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
-
-## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-
-## Change Log
-<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
-
-## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
--->
-```
