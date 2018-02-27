@@ -11,7 +11,7 @@ function Article (rawDataObj) {
         this[key] = rawDataObj[key];
     });
 
-    // TODO: Use the object literal that is passed in to complete this constructor function
+    // TODONE: Use the object literal that is passed in to complete this constructor function
     // Object.keys is getting the keys from the object and looping for each key in the object and setting each key from the given object and saving it to Article as a property
     // Save ALL the properties of `rawDataObj` into `this`
 }
@@ -51,7 +51,7 @@ rawData.sort(function(a,b) {
     return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
-// TODO: Refactor these for loops using the .forEach() array method.
+// TODONE: Refactor these for loops using the .forEach() array method.
 
 // for(let i = 0; i < rawData.length; i++) {
 //     articles.push(new Article(rawData[i]));
