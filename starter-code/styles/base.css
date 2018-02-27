@@ -6,9 +6,3 @@ body {
 	font-family: sans-serif;
 	min-width: 300px;
 }
-
-@media screen and (max-width: 800px) and (min-width: 640px) {
-    .site-header {
-		background-color: rgb(74, 147, 243);
-    }
-}
