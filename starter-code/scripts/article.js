@@ -3,10 +3,10 @@
 const articles = [];
 
 // COMMENT: What is the purpose of the following function? Why is its name capitalized? Explain the context of "this" within the function. What does "rawDataObj" represent?
-// PUT YOUR RESPONSE HERE
+// 
 
 function Article (rawDataObj) {
-    Object.keys(rawDataObj).forEach(key => {
+    Object.keys(rawDataObj).forEach(function (key) {
         this[key] = rawDataObj[key];
     });
 
@@ -16,9 +16,10 @@ function Article (rawDataObj) {
 
 Article.prototype.toHtml = function() {
     // COMMENT: What is the benefit of cloning the article? (see the jQuery docs)
-    // PUT YOUR RESPONSE HERE
-
+    // It's helpful to duplicate matched elements on a page. Clone copies the dynamic state of an element as well. 
+/
     const template = $('#article-template').clone().html();
+
     /* TODO: We got the html from our template, but we need to turn the html string into a jQuery object and store it in our $newArticle variable. */
     const $newArticle;
 
