@@ -3,14 +3,14 @@
 const articles = [];
 
 // COMMENT: What is the purpose of the following function? Why is its name capitalized? Explain the context of "this" within the function. What does "rawDataObj" represent?
-// TODO As a style standard, the variable name of a constructor function is captilized to indicate that it is the template.
+// TODO The following function iterates through an object literal and stores each property and its value in a new instance of the Article object. As a style standard, the name of a constructor function is captilized to indicate that it is the template. 'This' will stand for the specific object instance created when a new article is made. The rawDataObj stands for the object literal representing a specific blog post that we're passing to the constructor function as an argument.
 
 function Article (rawDataObj) {
     Object.keys(rawDataObj).forEach(key => {
         this[key] = rawDataObj[key];
     });
 
-    // TODOne?: Explain this
+    // TODOne: Explain this
     // Setting up a constructor function for the object Article, which will create an instance that shares the properties of the object literal used as an argument.
 }
 
@@ -48,7 +48,7 @@ rawData.sort(function(a,b) {
     return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
-// TODO: Refactor these for loops using the .forEach() array method.
+// TODOne: Refactor these for loops using the .forEach() array method.
 
 rawData.forEach(function(rawArticle) {
     articles.push(new Article(rawArticle));
