@@ -1,0 +1,47 @@
+.icon-menu {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 3rem;
+}
+
+main h1 {
+    margin: 1.5rem 0;
+}
+
+address, time {
+    display: inline;
+}
+
+.byline {
+    color: rgb(120, 120, 120);    
+}
+
+.byline a {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.main-nav li {
+    display: none;
+    border-bottom: solid 1px rgb(210, 210, 210);
+    padding: 1rem 0.4rem;
+    margin-left: -1.2rem;
+    width: 100%;
+}
+
+.icon-menu:hover ~ li {
+    display: block;
+}
+
+
+@media screen and (min-width: 640px) {
+    .icon-menu {
+        display: none;
+    }
+    .main-nav li {
+        display: inline;
+        border: none;
+        margin-left: 1rem;
+    }
+}
