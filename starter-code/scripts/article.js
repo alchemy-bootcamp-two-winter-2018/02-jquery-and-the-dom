@@ -5,10 +5,77 @@ const articles = [];
 // COMMENT: What is the purpose of the following function? Why is its name capitalized? Explain the context of "this" within the function. What does "rawDataObj" represent?
 // This constructor function creates new instances of the Article object and assigns the keys of each new instance to match the keys of the object literal (in the "rawData" array) from which it is created (see the 'for' loop in line 49)
 
+new Article ({name: 'lol', age: 5});
+
 function Article (rawDataObj) {
-    Object.keys(rawDataObj).forEach((key) => {
-        this[key] = rawDataObj[key];
+    const arrayOfDataProps = Object.keys(rawDataObj);
+    arrayOfDataProps.forEach((propName) => {
+        this[propName] = rawDataObj[propName];
+        // the article we're creating && the rawDataObj that was given
     });
+
+/*  arrayOfDataProps.forEach()
+
+    arrayOfDataProps = ['title', 'publishedOn', 'body', 'author'];
+
+    ('title') => {
+        newArticle['title'] = rawDataObj['title'];
+    }
+
+    ('publishedOn') => {
+        newArticle['publishedOn'] = rawDataObj['publishedOn'];
+    }
+
+    ('body') => {
+        newArticle['body'] = rawDataObj['body'];
+    }
+
+    ('author') => {
+        newArticle['author'] = rawDataObj['author'];
+    }
+
+*/
+
+/* Object.keys(rawDataObj)
+
+    returns an array filled with strings that are the keys in rawDataObj
+
+*/
+
+/* callback function (propName) => {....}
+
+    function (paramterName, etc, yay) { // code; }
+    (param, parachute, pikachu) => { // code; }
+
+*/
+
+
+/*    this[propName] = rawDataObj[propName];
+
+    hats.hit // object property
+    hats['hit'] // also object property
+
+    this.monkeys = 'something';
+    this['monkeys'] = 'something else';
+
+    const monkey = {
+        name: 'jane',
+        age: 5
+    };
+
+    const newMonkey = {};
+    newMonkey['name'] = monkey['name'];
+
+    const propertyToCopy = 'age';
+    newMonkey[propertyToCopy] = monkey[propertyToCopy];
+    // {age: }                    5
+    // {age: 5}
+
+
+
+*/
+
+
 
 //line 9 runs the Object.keys method on rawDataObj for each key within the object literal in the rawData array (line 49 loop again), which returns an array with the keys in rawDatObj, and begins the forEach function (which acts like a modified 'for' loop with a built-in .length for the number of iterations on it).
 //line 10 is what happens when the forEach loop runs, and it assigns to the new Article object created the key/value pair of the first item in the rawData array, and does this for every item in that array.
