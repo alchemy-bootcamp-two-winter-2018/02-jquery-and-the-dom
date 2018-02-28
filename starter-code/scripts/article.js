@@ -3,29 +3,34 @@
 const articles = [];
 
 // COMMENT: What is the purpose of the following function? Why is its name capitalized? Explain the context of "this" within the function. What does "rawDataObj" represent?
-// PUT YOUR RESPONSE HERE
+// This constructor function creates new instances of the Article object and assigns the keys of each new instance to match the keys of the object literal (in the "rawData" array) from which it is created (see the 'for' loop in line 49)
 
 function Article (rawDataObj) {
-    Object.keys(rawDataObj).forEach(key => {
+    Object.keys(rawDataObj).forEach((key) => {
         this[key] = rawDataObj[key];
     });
 
-    // TODO: Use the object literal that is passed in to complete this constructor function
-    // Save ALL the properties of `rawDataObj` into `this`
+//line 9 runs the Object.keys method on rawDataObj for each key within the object literal in the rawData array (line 49 loop again), which returns an array with the keys in rawDatObj, and begins the forEach function (which acts like a modified 'for' loop with a built-in .length for the number of iterations on it).
+//line 10 is what happens when the forEach loop runs, and it assigns to the new Article object created the key/value pair of the first item in the rawData array, and does this for every item in that array.
 }
 
 Article.prototype.toHtml = function() {
     // COMMENT: What is the benefit of cloning the article? (see the jQuery docs)
-    // PUT YOUR RESPONSE HERE
-
+    // It's helpful to duplicate matched elements on a page. Clone copies the dynamic state of an element as well.
     const template = $('#article-template').clone().html();
-    /* TODO: We got the html from our template, but we need to turn the html string into a jQuery object and store it in our $newArticle variable. */
-    const $newArticle;
+
+    /* TODOne: We got the html from our template, but we need to turn the html string into a jQuery object and store it in our $newArticle variable. */
+    const $newArticle = $(template);
 
     if (!this.publishedOn) $newArticle.addClass('draft');
-    $newArticle.attr('data-category', this.category);
+    $newArticle.attr('data-js-category', this.category);
+    $newArticle.find('#authorName').text(this.author);
+    $newArticle.find('#authorName').attr('href',this.authorURL);
+    $newArticle.find('#bookTitle').text(this.title);
+    $newArticle.find('.article-body').html(this.body);
+    $newArticle.find('time').attr('datetime',this.publishedOn);
 
-    /* TODO: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
+    /* TODOne: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
     We need to fill in:
     1. author name,
     2. author url,
@@ -44,12 +49,14 @@ rawData.sort(function(a,b) {
     return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
-// TODO: Refactor these for loops using the .forEach() array method.
+// TODOne: Refactor these for loops using the .forEach() array method.
 
-for(let i = 0; i < rawData.length; i++) {
-    articles.push(new Article(rawData[i]));
-}
 
-for(let i = 0; i < articles.length; i++) {
-    $('#articles').append(articles[i].toHtml());
-}
+
+rawData.forEach(function(rawDataObj) {
+    articles.push(new Article(rawDataObj));
+});
+
+articles.forEach(function(article) {
+    $('#articles').append(article.toHtml());
+});
