@@ -1,9 +1,9 @@
 'use strict';
 
 // COMMENT: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
-// PUT YOUR RESPONSE HERE
+// The rawData goes through the constructor function creating an object with key/value pairs for each item in the array and then gets pushed into articles array and then each property of the article gets appended to the Document Object Model.
 
-const rawData = [
+const rawData = [ //eslint-disable-line
     {
         title:       'Bacon Ipsum',
         category:    'food',
